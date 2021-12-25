@@ -18,19 +18,17 @@ seek_seeds_word <- function(.seeds, .word, .eval = "seq", cl = NULL) {
   stopifnot(.eval %in% c("seq", "par", "future"))
   if (.eval == "seq") {
     p <- progressr::progressor(along = .seeds)
+    progressr::handlers(global = TRUE)
     progressr::handlers("progress")
-    progressr::with_progress({
       lapply(.seeds, function(x) {
         p()
         res <- check_seed_word(x, size = size, word = .word)
         if (res) stop(paste("Success: Seed:", x), call. = FALSE)
       })
       message("Sorry, no magic number found.\nSequential lapply() was used for iteration.")
-    }, enable = TRUE)
   }
   if (.eval == "par") {
     stopifnot(exists(quote(cl)))
-    # clusterExport(cl, "check_seed_word")
     clusterApply(cl, .seeds, function(x) {
       res <- check_seed_word(x, size = size, word = .word)
       if (res) stop(paste("Success: Seed:", x), call. = FALSE)
@@ -39,15 +37,15 @@ seek_seeds_word <- function(.seeds, .word, .eval = "seq", cl = NULL) {
   }
   if (.eval == "future") {
     p <- progressr::progressor(along = .seeds)
+    progressr::handlers(global = TRUE)
     progressr::handlers("progress")
-    progressr::with_progress({
-      future.apply::future_lapply(.seeds, function(x) {
+    future.apply::future_lapply(.seeds, function(x) {
       p()
       res <- check_seed_word(x, size = size, word = .word)
       if (res) stop(paste("Success: Seed:", x), call. = FALSE)
-      }, future.globals = "check_seed_word", future.seed = NULL)
-      message("Sorry, no magic number found.\nfuture.apply::future_lapply() was used for iteration.")
-    }, enable = TRUE)
+    }, future.globals = "check_seed_word", future.seed = NULL
+    )
+    message("Sorry, no magic number found.\nfuture.apply::future_lapply() was used for iteration.")
   }
   invisible(NULL)
 }
