@@ -44,4 +44,5 @@ clusterExport(cl, "seek_seed")
 # iterate_seeds(cl, 0:5e6, "year")
 # test_seed(443238, 4)
 
-iterate_seeds(cl, 0:5e6, "new")
+# iterate_seeds(cl, 0:5e6, "new")
+# test_seed(10641, 3)
