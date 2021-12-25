@@ -23,4 +23,6 @@ Iterate over a vector of seeds to find a magic number for your word of choice.
 }
 \examples{
 seek_seeds_word(0:1e3, "ab")
+seek_seeds_word(50000:70000, "xmas", .eval = "par", cl)
+seek_seeds_word(50000:70000, "xmas", .eval = "future", cl)
 }

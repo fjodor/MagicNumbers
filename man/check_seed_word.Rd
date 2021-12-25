@@ -20,5 +20,6 @@ TRUE if seed generates the word, FALSE otherwise
 Check if a random seed generates a specific word (only letters, no blanks)
 }
 \examples{
-internal function, called from seek_seeds
+check_seed_word(19421956, 5, "merry")  # TRUE
+check_seed_word(64927, 4, "xmas")      # TRUE
 }

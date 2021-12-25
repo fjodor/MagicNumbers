@@ -6,7 +6,8 @@
 #'
 #' @return TRUE if seed generates the word, FALSE otherwise
 #'
-#' @examples internal function, called from seek_seeds
+#' @examples check_seed_word(19421956, 5, "merry")  # TRUE
+#' @examples check_seed_word(64927, 4, "xmas")      # TRUE
 
 check_seed_word <- function(seed, size, word) {
   set.seed(seed)
@@ -20,9 +21,9 @@ check_seed_word <- function(seed, size, word) {
 #' @param size number of characters of word, used in sample(..., size = size)
 #' @param phrase phrase to check: may contain lower-case letters and blanks
 #'
-#' @return
+#' @return TRUE if seed generates the phrase, FALSE otherwise
 #'
-#' @examples
+#' @examples check_seed_phrase(1, 5, "ja ja")  # FALSE
 
 check_seed_phrase <- function(seed, size, phrase) {
   set.seed(seed)

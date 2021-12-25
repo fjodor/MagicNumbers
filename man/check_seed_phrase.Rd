@@ -14,8 +14,11 @@ check_seed_phrase(seed, size, phrase)
 \item{phrase}{phrase to check: may contain lower-case letters and blanks}
 }
 \value{
-
+TRUE if seed generates the phrase, FALSE otherwise
 }
 \description{
 Check if a random seed generates a specific phrase (letters and blanks)
+}
+\examples{
+check_seed_phrase(1, 5, "ja ja")  # FALSE
 }

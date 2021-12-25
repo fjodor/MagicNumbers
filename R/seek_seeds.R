@@ -30,7 +30,7 @@ seek_seeds_word <- function(.seeds, .word, .eval = "seq", cl = NULL) {
   }
   if (.eval == "par") {
     stopifnot(exists(quote(cl)))
-    clusterExport(cl, "check_seed_word")
+    # clusterExport(cl, "check_seed_word")
     clusterApply(cl, .seeds, function(x) {
       res <- check_seed_word(x, size = size, word = .word)
       if (res) stop(paste("Success: Seed:", x), call. = FALSE)
@@ -45,7 +45,7 @@ seek_seeds_word <- function(.seeds, .word, .eval = "seq", cl = NULL) {
       p()
       res <- check_seed_word(x, size = size, word = .word)
       if (res) stop(paste("Success: Seed:", x), call. = FALSE)
-      }, future.globals = "check_seed_word")
+      }, future.globals = "check_seed_word", future.seed = NULL)
       message("Sorry, no magic number found.\nfuture.apply::future_lapply() was used for iteration.")
     }, enable = TRUE)
   }
