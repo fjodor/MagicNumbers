@@ -2,7 +2,6 @@ seek_seed <- function(seed, size, message) {
   set.seed(seed)
   text <- sample(letters, size = size, replace = TRUE) |>
     paste(collapse = "")
-  # ifelse(text == message, TRUE, FALSE)
   text == message
 }
 
@@ -53,5 +52,11 @@ clusterExport(cl, "seek_seed")
 # )
 # :-( old function more than 3x faster than newer package function
 
-iterate_seeds(cl, 0:5e6, "bday")
-test_seed(110454, 4)
+# iterate_seeds(cl, 0:5e6, "bday")
+# test_seed(110454, 4)
+
+# iterate_seeds(cl, 0:5e6, "best")
+# test_seed(135996, 4)
+
+# iterate_seeds(cl, 0:5e6, "wishes")
+iterate_seeds(cl, 5e6:10e6, "wishes")
