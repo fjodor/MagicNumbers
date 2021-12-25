@@ -28,6 +28,13 @@ clusterExport(cl, "seek_seed")
 
 #-------------------------------------------------------------#
 
+# Speed test
+
+system.time(iterate_seeds(cl, 0:1e4, "merry")) # 1.05s
+system.time(seek_seeds_word(0:1e4, "merry")) # 11.81s
+system.time(seek_seeds_word(0:1e4, "merry", .progress = FALSE)) #0.13s
+system.time(seek_seeds_word(0:1e4, "merry", .eval = "par", cl)) # 3.47s
+
 # iterate_seeds(cl, 18e6:20e6, "merry")
 # iterate_seeds(cl, 194e5:195e5, "merry")
 
