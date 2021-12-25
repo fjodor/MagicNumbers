@@ -46,3 +46,12 @@ clusterExport(cl, "seek_seed")
 
 # iterate_seeds(cl, 0:5e6, "new")
 # test_seed(10641, 3)
+
+# bench::mark(
+#   iterate_seeds(cl, 0:5e3, "test"),
+#   seek_seeds_word(0:5e3, "test", .eval = "par", cl)
+# )
+# :-( old function more than 3x faster than newer package function
+
+iterate_seeds(cl, 0:5e6, "bday")
+test_seed(110454, 4)
