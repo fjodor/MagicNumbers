@@ -11,7 +11,8 @@ cl <- makeCluster(parallelly::availableCores(omit = 2))
 # clusterApply 345ms
 # future_lapply 1.16s
 
-future::plan("cluster")
+library(future)
+plan(cluster)
 
 bench::mark(
   lapply = seek_seeds_word(0:1e3, "xmas"),
