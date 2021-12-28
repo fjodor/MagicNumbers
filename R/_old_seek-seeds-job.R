@@ -66,4 +66,8 @@ system.time(seek_seeds_word(0:1e4, "merry", .eval = "par", cl)) # 3.47s
 # test_seed(135996, 4)
 
 # iterate_seeds(cl, 0:5e6, "wishes")
-iterate_seeds(cl, 5e6:10e6, "wishes")
+# iterate_seeds(cl, 5e6:10e6, "wishes")
+# iterate_seeds(cl, 10e6:15e6, "wishes")
+iterate_seeds(cl, 15e6:20e6, "wishes")
+iterate_seeds(cl, 20e6:25e6, "wishes")
+iterate_seeds(cl, 25e6:35e6, "wishes")
