@@ -30,10 +30,10 @@ clusterExport(cl, "seek_seed")
 
 # Speed test
 
-system.time(iterate_seeds(cl, 0:1e4, "merry")) # 1.05s
-system.time(seek_seeds_word(0:1e4, "merry")) # 11.81s
-system.time(seek_seeds_word(0:1e4, "merry", .progress = FALSE)) #0.13s
-system.time(seek_seeds_word(0:1e4, "merry", .eval = "par", cl)) # 3.47s
+# system.time(iterate_seeds(cl, 0:1e4, "merry")) # 1.05s
+# system.time(seek_seeds_word(0:1e4, "merry")) # 11.81s
+# system.time(seek_seeds_word(0:1e4, "merry", .progress = FALSE)) #0.13s
+# system.time(seek_seeds_word(0:1e4, "merry", .eval = "par", cl)) # 3.47s
 
 # iterate_seeds(cl, 18e6:20e6, "merry")
 # iterate_seeds(cl, 194e5:195e5, "merry")
@@ -68,6 +68,11 @@ system.time(seek_seeds_word(0:1e4, "merry", .eval = "par", cl)) # 3.47s
 # iterate_seeds(cl, 0:5e6, "wishes")
 # iterate_seeds(cl, 5e6:10e6, "wishes")
 # iterate_seeds(cl, 10e6:15e6, "wishes")
-iterate_seeds(cl, 15e6:20e6, "wishes")
-iterate_seeds(cl, 20e6:25e6, "wishes")
-iterate_seeds(cl, 25e6:35e6, "wishes")
+# iterate_seeds(cl, 15e6:20e6, "wishes")
+# iterate_seeds(cl, 20e6:25e6, "wishes")
+# iterate_seeds(cl, 25e6:35e6, "wishes")
+# iterate_seeds(cl, 35e6:50e6, "wishes")
+iterate_seeds(cl, 50e6:60e6, "wishes")
+
+# iterate_seeds(cl, 0:5e6, "you")
+# MagicNumbers::test_seed(1750, 3)
