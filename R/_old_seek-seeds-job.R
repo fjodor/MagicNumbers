@@ -72,7 +72,21 @@ clusterExport(cl, "seek_seed")
 # iterate_seeds(cl, 20e6:25e6, "wishes")
 # iterate_seeds(cl, 25e6:35e6, "wishes")
 # iterate_seeds(cl, 35e6:50e6, "wishes")
-iterate_seeds(cl, 50e6:60e6, "wishes")
+# iterate_seeds(cl, 50e6:60e6, "wishes")
+# iterate_seeds(cl, 60e6:75e6, "wishes")
+# iterate_seeds(cl, 75e6:90e6, "wishes")
+# iterate_seeds(cl, 90e6:10e7, "wishes")
+# iterate_seeds(cl, 10e7:12e7, "wishes")
+# iterate_seeds(cl, 12e7:14e7, "wishes")
+# iterate_seeds(cl, 14e7:16e7, "wishes")
 
 # iterate_seeds(cl, 0:5e6, "you")
 # MagicNumbers::test_seed(1750, 3)
+
+#------------------------------------------------------#
+
+library(parallel)
+cl <- makeCluster(parallelly::availableCores(omit = 1))
+plan(cluster)
+
+seek_seeds_word(16e7:18e7, "wishes", .eval = "future", .progress = FALSE, cl)

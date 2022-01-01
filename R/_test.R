@@ -1,5 +1,5 @@
 library(parallel)
-cl <- makeCluster(parallelly::availableCores(omit = 2))
+cl <- makeCluster(parallelly::availableCores(omit = 1))
 
 # bench::mark(
 #   lapply = seek_seeds_word(0:1e3, "xmas"),
@@ -166,3 +166,81 @@ system.time(seek_seeds_word(0:1e5, "merry", .eval = "future", .progress = FALSE)
 
 # clusterApply still way slower
 
+# Test with new package version
+
+library(tictoc)
+
+gc()
+tic()
+seek_seeds_word(0:1e5, "merry", .progress = FALSE)
+toc()
+
+gc()
+tic()
+seek_seeds_word(0:1e5, "merry", .eval = "par", cl)
+toc()
+
+gc()
+tic()
+seek_seeds_word(0:1e5, "merry", .eval = "future", .progress = FALSE)
+toc()
+
+gc()
+tic()
+seek_seeds_word(0:1e5, "merry", .eval = "future", .progress = TRUE)
+toc()
+
+gc()
+tic()
+iterate_seedwords_par(0:1e5, "merry", cl)
+toc()
+
+# Increase search space
+
+gc()
+tic()
+seek_seeds_word(0:1e6, "merry", .progress = FALSE)
+toc()
+
+gc()
+tic()
+seek_seeds_word(0:1e6, "merry", .eval = "par", cl)
+toc()
+
+gc()
+tic()
+seek_seeds_word(0:1e6, "merry", .eval = "future", .progress = FALSE)
+toc()
+
+gc()
+tic()
+seek_seeds_word(0:1e6, "merry", .eval = "future", .progress = TRUE)
+toc()
+
+gc()
+tic()
+iterate_seedwords_par(0:1e6, "merry", cl)
+toc()
+
+
+# Increase search space
+
+gc()
+tic()
+seek_seeds_word(0:10e6, "merry", .progress = FALSE)
+toc()
+
+gc()
+tic()
+seek_seeds_word(0:10e6, "merry", .eval = "par", cl)
+toc()
+
+gc()
+tic()
+seek_seeds_word(0:10e6, "merry", .eval = "future", .progress = FALSE)
+toc()
+
+gc()
+tic()
+iterate_seedwords_par(0:10e6, "merry", cl)
+toc()
