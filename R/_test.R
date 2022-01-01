@@ -59,17 +59,17 @@ library(future)
 plan(cluster)
 
 bench::mark(
-  lapply_progress = seek_seeds_word(0:5e3, "xmas"),
+  lapply_progress = seek_seeds_word(0:5e3, "xmas", .progress = TRUE),
   lapply_silent = seek_seeds_word(0:5e3, "xmas", .progress = FALSE),
   clusterApply = seek_seeds_word(0:5e3, "xmas", .eval = "par", cl),
-  future_lapply_progress = seek_seeds_word(0:5e3, "xmas", .eval = "future"),
+  future_lapply_progress = seek_seeds_word(0:5e3, "xmas", .eval = "future", .progress = TRUE, cl),
   future_lapply_silent = seek_seeds_word(0:5e3, "xmas", .eval = "future", .progress = FALSE, cl)
 )
 
 bench::mark(
-  future_cluster = {plan(cluster); seek_seeds_word(0:3e3, "xmas", .eval = "future")},
+  future_cluster = {plan(cluster); seek_seeds_word(0:3e3, "xmas", .eval = "future", .progress = TRUE)},
   future_cluster_silent = {plan(cluster); seek_seeds_word(0:3e3, "xmas", .eval = "future", .progress = FALSE)},
-  future_multisession = {plan(multisession); seek_seeds_word(0:3e3, "xmas", .eval = "future")},
+  future_multisession = {plan(multisession); seek_seeds_word(0:3e3, "xmas", .eval = "future", .progress = TRUE)},
   future_multisession_silent = {plan(multisession); seek_seeds_word(0:3e3, "xmas", .eval = "future", .progress = FALSE)}
 )
 
@@ -172,7 +172,12 @@ library(tictoc)
 
 gc()
 tic()
-seek_seeds_word(0:1e5, "merry", .progress = FALSE)
+seek_seeds_word(0:1e5, "merry")
+toc()
+
+gc()
+tic()
+seek_seeds_word(0:1e5, "merry", .progress = TRUE)
 toc()
 
 gc()
@@ -199,28 +204,34 @@ toc()
 
 gc()
 tic()
-seek_seeds_word(0:1e6, "merry", .progress = FALSE)
+seek_seeds_word(0:20e5, "merry", .progress = FALSE)
 toc()
 
 gc()
 tic()
-seek_seeds_word(0:1e6, "merry", .eval = "par", cl)
+seek_seeds_word(0:20e5, "merry", .eval = "par", cl)
 toc()
 
 gc()
 tic()
-seek_seeds_word(0:1e6, "merry", .eval = "future", .progress = FALSE)
+seek_seeds_word(0:20e5, "merry", .eval = "future", .progress = FALSE)
 toc()
 
 gc()
 tic()
-seek_seeds_word(0:1e6, "merry", .eval = "future", .progress = TRUE)
+seek_seeds_word(0:20e5, "merry", .eval = "future", .progress = TRUE)
 toc()
 
 gc()
 tic()
-iterate_seedwords_par(0:1e6, "merry", cl)
+iterate_seedwords_par(0:20e5, "merry", cl)
 toc()
+
+bench::mark(
+  iterate_seedwords_par(0:20e5, "merry", cl),
+  seek_seeds_word(0:20e5, "merry", .eval = "future", cl),
+  seek_seeds_word(0:20e5, "merry", .eval = "future", cl, .progress = TRUE)
+)
 
 
 # Increase search space

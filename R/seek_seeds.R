@@ -13,19 +13,19 @@
 #' @examples seek_seeds_word(50000:70000, "xmas", .eval = "par", cl)
 #' @examples seek_seeds_word(50000:70000, "xmas", .eval = "future", cl)
 
-seek_seeds_word <- function(.seeds, .word, .eval = "seq", cl = NULL, .progress = TRUE) {
+seek_seeds_word <- function(.seeds, .word, .eval = "seq", cl = NULL, .progress = FALSE) {
   .size <- nchar(.word)
   stopifnot(.size > 0)
   stopifnot(.eval %in% c("seq", "par", "future"))
   if (.eval == "seq" & .progress == TRUE) {
-    p <- progressr::progressor(along = .seeds)
     progressr::handlers(global = TRUE)
     progressr::handlers("progress")
-      lapply(.seeds, function(x) {
-        p()
-        res <- check_seed_word(x, size = .size, word = .word)
-        if (res) stop(paste("Success: Seed:", x), call. = FALSE)
-      })
+    p <- progressr::progressor(along = .seeds)
+    lapply(.seeds, function(x) {
+      p()
+      res <- check_seed_word(x, size = .size, word = .word)
+      if (res) stop(paste("Success: Seed:", x), call. = FALSE)
+    })
       message("Sorry, no magic number found.\nSequential lapply() was used for iteration.")
   }
   if (.eval == "seq" & .progress == FALSE) {
@@ -45,9 +45,9 @@ seek_seeds_word <- function(.seeds, .word, .eval = "seq", cl = NULL, .progress =
     message("Sorry, no magic number found.\nparallel::clusterApply() was used for iteration.")
   }
   if (.eval == "future" & .progress == TRUE) {
-    p <- progressr::progressor(along = .seeds)
     progressr::handlers(global = TRUE)
     progressr::handlers("progress")
+    p <- progressr::progressor(along = .seeds)
     future.apply::future_lapply(.seeds, function(x) {
       p()
       res <- check_seed_word(x, size = .size, word = .word)
@@ -68,7 +68,7 @@ seek_seeds_word <- function(.seeds, .word, .eval = "seq", cl = NULL, .progress =
   invisible(NULL)
 }
 
-seek_seeds_phrase <- function(cl, .seeds, .phrase, .eval = "seq") {
+seek_seeds_phrase <- function(.seeds, .phrase, .eval = "seq", cl = NULL, .progress = FALSE) {
   size <- nchar(.phrase)
   stopifnot(size > 0)
   stopifnot(.eval %in% c("seq", "par", "future"))
