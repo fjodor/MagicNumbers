@@ -37,5 +37,9 @@ plan(cluster)
 # seek_seeds_word(0:3e8, "pretty", .eval = "future", cl)
 # seek_seeds_word(3e8:6e8, "pretty", .eval = "future", cl)
 
-seek_seeds_word(0:3e8, "face", .eval = "future", cl)
+# seek_seeds_word(0:3e8, "face", .eval = "future", cl)
 
+# seek_seeds_word(0:3e8, "to", .eval = "future", cl)
+# seek_seeds_word(0:3e8, "your", .eval = "future", cl)
+
+seek_seeds_word(0:5e8, "little", .eval = "future", cl)
