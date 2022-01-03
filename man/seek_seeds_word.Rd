@@ -4,9 +4,9 @@
 \alias{seek_seeds_word}
 \title{Iterate over a vector of seeds to find a magic number for your word of choice.}
 \usage{
-seek_seeds_word(.seeds, .word, .eval = "seq", cl = NULL, .progress = TRUE)
+seek_seeds_word(.seeds, .word, .eval = "seq", cl = NULL, .progress = FALSE)
 
-seek_seeds_word(.seeds, .word, .eval = "seq", cl = NULL, .progress = TRUE)
+seek_seeds_word(.seeds, .word, .eval = "seq", cl = NULL, .progress = FALSE)
 }
 \arguments{
 \item{.seeds}{vector of seeds to iterate over, e. g. 0:1e5}
