@@ -58,6 +58,10 @@ plan(cluster)
 # seek_seeds_word(0:1e6, "our", .eval = "future", cl)
 # seek_seeds_word(0:1e6, "yes", .eval = "future", cl)
 # seek_seeds_word(0:1e6, "no", .eval = "future", cl)
+# seek_seeds_word(0:3e8, "fine", .eval = "future", cl)
+# seek_seeds_word(0:3e8, "had", .eval = "future", cl)
+# seek_seeds_word(0:3e8, "equal", .eval = "future", cl)
+# seek_seeds_word(0:3e8, "old", .eval = "future", cl)
 #
 # seek_seeds_word(0:5e8, "weather", .eval = "future", cl)
 # seek_seeds_word(5e8:8e8, "weather", .eval = "future", cl)
@@ -70,18 +74,14 @@ seek_seeds_word(19e8:21.47483647e8, "weather", .eval = "future", cl)
 #---------------------------------------------------------#
 # Yet to calculate!
 
-# seek_seeds_word(0:3e8, "fine", .eval = "future", cl)
 # seek_seeds_word(0:3e8, "have", .eval = "future", cl)
-# seek_seeds_word(0:3e8, "had", .eval = "future", cl)
 # seek_seeds_word(0:3e8, "data", .eval = "future", cl)
 # seek_seeds_word(0:3e8, "more", .eval = "future", cl)
 
 # seek_seeds_word(0:3e8, "need", .eval = "future", cl)
-# seek_seeds_word(0:3e8, "equal", .eval = "future", cl)
 
 # seek_seeds_word(0:3e8, "better", .eval = "future", cl)
 # seek_seeds_word(0:3e8, "secret", .eval = "future", cl)
-# seek_seeds_word(0:3e8, "old", .eval = "future", cl)
 
 # tidyverse, least, favorite, most, animal, color, language
 # Rtistry, useR, teacheR, number, cruncher
