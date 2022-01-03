@@ -51,9 +51,6 @@ plan(cluster)
 # seek_seeds_word(18e8:21.47483647e8, "solution", .eval = "future", cl)
 # Word too long as well!
 
-#---------------------------------------------------------#
-# Yet to calculate!
-
 # seek_seeds_word(0:3e8, "too", .eval = "future", cl)
 
 # seek_seeds_word(0:1e6, "me", .eval = "future", cl)
@@ -61,7 +58,7 @@ plan(cluster)
 # seek_seeds_word(0:1e6, "our", .eval = "future", cl)
 # seek_seeds_word(0:1e6, "yes", .eval = "future", cl)
 # seek_seeds_word(0:1e6, "no", .eval = "future", cl)
-
+#
 # seek_seeds_word(0:5e8, "weather", .eval = "future", cl)
 # seek_seeds_word(5e8:8e8, "weather", .eval = "future", cl)
 # seek_seeds_word(8e8:11e8, "weather", .eval = "future", cl)
@@ -69,6 +66,9 @@ plan(cluster)
 # seek_seeds_word(14e8:17e8, "weather", .eval = "future", cl)
 # seek_seeds_word(17e8:19e8, "weather", .eval = "future", cl)
 seek_seeds_word(19e8:21.47483647e8, "weather", .eval = "future", cl)
+
+#---------------------------------------------------------#
+# Yet to calculate!
 
 # seek_seeds_word(0:3e8, "fine", .eval = "future", cl)
 # seek_seeds_word(0:3e8, "have", .eval = "future", cl)
