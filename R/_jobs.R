@@ -23,11 +23,13 @@ plan(cluster)
 
 seek_seeds_word(0:3e8, "secret", .eval = "future", cl)
 
-seek_seeds_word(0:3e8, "job", .eval = "future", cl)
 seek_seeds_word(0:3e8, "user", .eval = "future", cl)
 seek_seeds_word(0:3e8, "most", .eval = "future", cl)
 seek_seeds_word(0:3e8, "least", .eval = "future", cl)
 seek_seeds_word(0:3e8, "color", .eval = "future", cl)
+seek_seeds_word(0:3e8, "lucky", .eval = "future", cl)
+seek_seeds_word(0:3e8, "money", .eval = "future", cl)
+
 seek_seeds_word(0:3e8, "teacher", .eval = "future", cl)
 
 seek_seeds_word(0:3e8, "number", .eval = "future", cl)
