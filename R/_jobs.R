@@ -2,6 +2,12 @@
 
 library(MagicNumbers)
 library(parallel)
+# try(stopCluster(cl))
+# Doesn't exist when starting new local job
+# But recommendation: remove previous jobs before starting new one. There is an option to recover old jobs,
+# which may cost memory and stability.
+
+gc()
 cl <- makeCluster(parallelly::availableCores(omit = 2, logical = FALSE))
 library(future)
 plan(cluster)
@@ -21,9 +27,8 @@ plan(cluster)
 #---------------------------------------------------------#
 # Yet to calculate!
 
-seek_seeds_word(0:3e8, "color", .eval = "future", cl)
-seek_seeds_word(0:3e8, "lucky", .eval = "future", cl)
 seek_seeds_word(0:3e8, "money", .eval = "future", cl)
+seek_seeds_word(0:3e8, "first", .eval = "future", cl)
 
 seek_seeds_word(0:3e8, "likely", .eval = "future", cl)
 
@@ -44,5 +49,3 @@ seek_seeds_word(0:3e8, "favorite", .eval = "future", cl)
 seek_seeds_word(0:3e8, "language", .eval = "future", cl)
 
 seek_seeds_word(0:3e8, "tidyverse", .eval = "future", cl)
-
-# first, last
