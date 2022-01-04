@@ -21,10 +21,11 @@ plan(cluster)
 #---------------------------------------------------------#
 # Yet to calculate!
 
-seek_seeds_word(0:3e8, "least", .eval = "future", cl)
 seek_seeds_word(0:3e8, "color", .eval = "future", cl)
 seek_seeds_word(0:3e8, "lucky", .eval = "future", cl)
 seek_seeds_word(0:3e8, "money", .eval = "future", cl)
+
+seek_seeds_word(0:3e8, "likely", .eval = "future", cl)
 
 seek_seeds_word(0:3e8, "teacher", .eval = "future", cl)
 
@@ -43,3 +44,5 @@ seek_seeds_word(0:3e8, "favorite", .eval = "future", cl)
 seek_seeds_word(0:3e8, "language", .eval = "future", cl)
 
 seek_seeds_word(0:3e8, "tidyverse", .eval = "future", cl)
+
+# first, last
