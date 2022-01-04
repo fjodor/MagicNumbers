@@ -27,12 +27,17 @@ plan(cluster)
 #---------------------------------------------------------#
 # Yet to calculate!
 
-# seek_seeds_word(0:3e8, "likely", .eval = "future", cl)
-seek_seeds_word(3e8:6e8, "likely", .eval = "future", cl)
+# seed = 690, word = "in"
 
-seek_seeds_word(0:3e8, "teacher", .eval = "future", cl)
+# seek_seeds_word(0:3e8, "likely", .eval = "future", cl)
+# seek_seeds_word(3e8:6e8, "likely", .eval = "future", cl)
+# seek_seeds_word(6e8:9e8, "likely", .eval = "future", cl)
+
+# seek_seeds_word(0:3e8, "teacher", .eval = "future", cl)
+# seek_seeds_word(3e8:6e8, "teacher", .eval = "future", cl)
 
 seek_seeds_word(0:3e8, "number", .eval = "future", cl)
+# seed: 89399740, text: "number"
 
 seek_seeds_word(0:3e8, "python", .eval = "future", cl)
 
