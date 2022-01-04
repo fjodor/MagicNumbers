@@ -16,12 +16,11 @@ plan(cluster)
 # programming
 # beautiful
 # solution
-# weather: 6 characters!
+# weather: 7 characters!
 
 #---------------------------------------------------------#
 # Yet to calculate!
 
-seek_seeds_word(0:3e8, "better", .eval = "future", cl)
 seek_seeds_word(0:3e8, "secret", .eval = "future", cl)
 
 seek_seeds_word(0:3e8, "job", .eval = "future", cl)
