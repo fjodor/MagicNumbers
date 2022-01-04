@@ -27,10 +27,8 @@ plan(cluster)
 #---------------------------------------------------------#
 # Yet to calculate!
 
-seek_seeds_word(0:3e8, "money", .eval = "future", cl)
-seek_seeds_word(0:3e8, "first", .eval = "future", cl)
-
-seek_seeds_word(0:3e8, "likely", .eval = "future", cl)
+# seek_seeds_word(0:3e8, "likely", .eval = "future", cl)
+seek_seeds_word(3e8:6e8, "likely", .eval = "future", cl)
 
 seek_seeds_word(0:3e8, "teacher", .eval = "future", cl)
 
