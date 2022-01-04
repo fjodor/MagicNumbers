@@ -27,20 +27,13 @@ plan(cluster)
 #---------------------------------------------------------#
 # Yet to calculate!
 
-# seek_seeds_word(0:3e8, "likely", .eval = "future", cl)
-# seek_seeds_word(3e8:6e8, "likely", .eval = "future", cl)
-# seek_seeds_word(6e8:9e8, "likely", .eval = "future", cl)
-# seek_seeds_word(9e8:12e8, "likely", .eval = "future", cl)
-# seek_seeds_word(12e8:15e8, "likely", .eval = "future", cl)
-# seed = 1227671407, text = "likely"
-
 # seek_seeds_word(0:3e8, "teacher", .eval = "future", cl)
 # seek_seeds_word(3e8:6e8, "teacher", .eval = "future", cl)
 # seek_seeds_word(6e8:9e8, "teacher", .eval = "future", cl)
-seek_seeds_word(9e8:12e8, "teacher", .eval = "future", cl)
+# seek_seeds_word(9e8:12e8, "teacher", .eval = "future", cl)
+seek_seeds_word(12e8:15e8, "teacher", .eval = "future", cl)
 
-# seek_seeds_word(0:3e8, "python", .eval = "future", cl)
-# seed = 81544154, text = "python"
+seek_seeds_word(0:3e8, "lost", .eval = "future", cl)
 
 seek_seeds_word(0:3e8, "animal", .eval = "future", cl)
 
@@ -53,3 +46,4 @@ seek_seeds_word(0:3e8, "favorite", .eval = "future", cl)
 seek_seeds_word(0:3e8, "language", .eval = "future", cl)
 
 seek_seeds_word(0:3e8, "tidyverse", .eval = "future", cl)
+
