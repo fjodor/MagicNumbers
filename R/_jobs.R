@@ -77,8 +77,8 @@ plan(cluster)
 
 # seek_seeds_word(0:3e8, "have", .eval = "future", cl)
 # seek_seeds_word(0:3e8, "data", .eval = "future", cl)
-seek_seeds_word(0:3e8, "more", .eval = "future", cl)
-seek_seeds_word(0:3e8, "need", .eval = "future", cl)
+# seek_seeds_word(0:3e8, "more", .eval = "future", cl)
+# seek_seeds_word(0:3e8, "need", .eval = "future", cl)
 seek_seeds_word(0:3e8, "better", .eval = "future", cl)
 seek_seeds_word(0:3e8, "secret", .eval = "future", cl)
 
