@@ -69,19 +69,18 @@ plan(cluster)
 # seek_seeds_word(11e8:14e8, "weather", .eval = "future", cl)
 # seek_seeds_word(14e8:17e8, "weather", .eval = "future", cl)
 # seek_seeds_word(17e8:19e8, "weather", .eval = "future", cl)
-seek_seeds_word(19e8:21.47483647e8, "weather", .eval = "future", cl)
+# seek_seeds_word(19e8:21.47483647e8, "weather", .eval = "future", cl)
+# Even a 6-letter-word not found!
 
 #---------------------------------------------------------#
 # Yet to calculate!
 
 # seek_seeds_word(0:3e8, "have", .eval = "future", cl)
 # seek_seeds_word(0:3e8, "data", .eval = "future", cl)
-# seek_seeds_word(0:3e8, "more", .eval = "future", cl)
-
-# seek_seeds_word(0:3e8, "need", .eval = "future", cl)
-
-# seek_seeds_word(0:3e8, "better", .eval = "future", cl)
-# seek_seeds_word(0:3e8, "secret", .eval = "future", cl)
+seek_seeds_word(0:3e8, "more", .eval = "future", cl)
+seek_seeds_word(0:3e8, "need", .eval = "future", cl)
+seek_seeds_word(0:3e8, "better", .eval = "future", cl)
+seek_seeds_word(0:3e8, "secret", .eval = "future", cl)
 
 # tidyverse, least, favorite, most, animal, color, language
 # Rtistry, useR, teacheR, number, cruncher
