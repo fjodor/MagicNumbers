@@ -7,7 +7,8 @@
 #' @return data frame that contains the new row of data
 #' @export
 #'
-#' @examples add_magic_number(text = "love", seed = 249725)
+#' @examples add_magic_number(.text = "love", .seed = 249725)
+#' @examples MagicNumbers <- add_magic_number(.text = "love", .seed = 249725)
 
 add_magic_number <- function(.seed, .text, .data = MagicNumbers) {
   if (.seed %in% .data[["seed"]]) {
@@ -16,7 +17,7 @@ add_magic_number <- function(.seed, .text, .data = MagicNumbers) {
   if (.text %in% .data[["text"]]) {
     stop(paste(.text, "already present in data!"))
   }
-  data <- rbind(data, data.frame(text = .text, seed = .seed))
+  data <- rbind(.data, data.frame(text = .text, seed = .seed))
   data <- dplyr::arrange(data, text)
   data
 }

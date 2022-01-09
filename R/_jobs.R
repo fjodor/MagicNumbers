@@ -33,8 +33,6 @@ plan(cluster)
 # seek_seeds_word(9e8:12e8, "teacher", .eval = "future", cl)
 seek_seeds_word(12e8:15e8, "teacher", .eval = "future", cl)
 
-seek_seeds_word(0:3e8, "lost", .eval = "future", cl)
-
 seek_seeds_word(0:3e8, "animal", .eval = "future", cl)
 
 seek_seeds_word(0:3e8, "cruncher", .eval = "future", cl)
