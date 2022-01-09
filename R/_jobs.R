@@ -8,7 +8,7 @@ library(parallel)
 # which may cost memory and stability.
 
 gc()
-cl <- makeCluster(parallelly::availableCores(omit = 2, logical = FALSE))
+cl <- makeCluster(parallelly::availableCores(omit = 1, logical = FALSE))
 library(future)
 plan(cluster)
 
