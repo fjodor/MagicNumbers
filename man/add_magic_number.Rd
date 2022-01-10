@@ -20,5 +20,6 @@ data frame that contains the new row of data
 Expand magic numbers data: Add row containing seed and text
 }
 \examples{
-add_magic_number(text = "love", seed = 249725)
+add_magic_number(.text = "love", .seed = 249725)
+MagicNumbers <- add_magic_number(.text = "love", .seed = 249725)
 }

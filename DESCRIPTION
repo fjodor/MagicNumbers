@@ -14,7 +14,8 @@ Imports:
     stringr,
     progressr,
     future,
-    future.apply
+    future.apply,
+    dplyr
 Depends: 
     R (>= 4.1.0),
 Suggests: 
