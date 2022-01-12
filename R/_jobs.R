@@ -7,8 +7,8 @@ library(MagicNumbers)
 # But recommendation: remove previous jobs before starting new one. There is an option to recover old jobs,
 # which may cost memory and stability.
 
-# gc()
-# cl <- makeCluster(parallelly::availableCores(omit = 1, logical = FALSE))
+gc()
+# cl <- makeCluster(parallelly::availableCores(omit = 2, logical = FALSE))
 # library(future)
 # plan(cluster)
 
@@ -27,14 +27,36 @@ library(MagicNumbers)
 #---------------------------------------------------------#
 # Yet to calculate!
 
-seek_seeds_word(0:9e7, "figuren")
-seek_seeds_word(9e7:2e8, "figuren")
+# seek_seeds_word(0:9e7, "figuren")
+# seek_seeds_word(9e7:2e8, "figuren")
+# seek_seeds_word(25e7:4e8, "figuren")
+# seek_seeds_word(4e8:6e8, "figuren")
+# seek_seeds_word(6e8:8e8, "figuren")
+# seek_seeds_word(8e8:10e8, "figuren")
+seek_seeds_word(10e8:12e8, "figuren")
 
-seek_seeds_word(12e8:15e8, "teacher")
-seek_seeds_word(0:3e8, "animal")
-seek_seeds_word(0:3e8, "cruncher")
-seek_seeds_word(0:3e8, "rtistry")
-seek_seeds_word(0:3e8, "favorite")
-seek_seeds_word(0:3e8, "language")
-seek_seeds_word(0:3e8, "tidyverse")
+# seek_seeds_word(12e8:14e8, "teacher")
+# seek_seeds_word(14e8:16e8, "teacher")
+seek_seeds_word(16e8:18e8, "teacher")
+
+# seek_seeds_word(0:2e8, "animal")
+# seek_seeds_word(2e8:4e8, "animal")
+seek_seeds_word(4e8:6e8, "animal")
+
+# seek_seeds_word(0:2e8, "cruncher")
+# seek_seeds_word(2e8:4e8, "cruncher")
+seek_seeds_word(4e8:6e8, "cruncher")
+
+# seek_seeds_word(0:2e8, "rtistry")
+# seek_seeds_word(2e8:4e8, "rtistry")
+seek_seeds_word(4e8:6e8, "rtistry")
+
+# seek_seeds_word(0:2e8, "favorite")
+seek_seeds_word(2e8:4e8, "favorite")
+
+# seek_seeds_word(0:2e8, "language")
+seek_seeds_word(2e8:4e8, "language")
+
+# seek_seeds_word(0:2e8, "tidyverse")
+seek_seeds_word(2e8:4e8, "tidyverse")
 
