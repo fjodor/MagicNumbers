@@ -24,22 +24,10 @@ gc()
 # solution
 # weather: 7 characters!
 # teacher
+# figuren
 
 #---------------------------------------------------------#
 # Yet to calculate!
-
-# seek_seeds_word(0:9e7, "figuren")
-# seek_seeds_word(9e7:2e8, "figuren")
-# seek_seeds_word(25e7:4e8, "figuren")
-# seek_seeds_word(4e8:6e8, "figuren")
-# seek_seeds_word(6e8:8e8, "figuren")
-# seek_seeds_word(8e8:10e8, "figuren")
-# seek_seeds_word(10e8:12e8, "figuren")
-# seek_seeds_word(12e8:14e8, "figuren")
-# seek_seeds_word(14e8:16e8, "figuren")
-# seek_seeds_word(16e8:18e8, "figuren")
-# seek_seeds_word(18e8:20e8, "figuren")
-seek_seeds_word(20e8:2147483647, "figuren")
 
 # seek_seeds_word(0:2e8, "cruncher")
 # seek_seeds_word(2e8:4e8, "cruncher")
@@ -47,7 +35,8 @@ seek_seeds_word(20e8:2147483647, "figuren")
 # seek_seeds_word(6e8:8e8, "cruncher") # ran a long time, but didn't finish
 # seek_seeds_word(65e7:8e8, "cruncher")
 # seek_seeds_word(8e8:10e8, "cruncher")
-seek_seeds_word(10e8:12e8, "cruncher")
+# seek_seeds_word(10e8:12e8, "cruncher")
+seek_seeds_word(105e7:12e8, "cruncher")
 
 # seek_seeds_word(0:2e8, "rtistry")
 # seek_seeds_word(2e8:4e8, "rtistry")
