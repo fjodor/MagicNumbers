@@ -29,8 +29,6 @@ gc()
 #---------------------------------------------------------#
 # Yet to calculate!
 
-seek_seeds_word(0:2e8, "name")
-
 
 # seek_seeds_word(0:2e8, "cruncher")
 # seek_seeds_word(2e8:4e8, "cruncher")
