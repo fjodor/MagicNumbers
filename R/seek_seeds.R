@@ -27,7 +27,7 @@ seek_seeds_word <- function(.seeds, .word, .eval = "seq", cl = NULL, .progress =
       if (res) stop(paste("Success: Seed:", x), call. = FALSE)
     })
     message(paste0("Sorry, no magic number found for ", .word,
-                   " using seeds from ", min(.seeds), " to ", max(.seeds),
+                   " using seeds from ", min(.seeds), " to ", max(.seeds), " at ", Sys.time(),
                    ".\nSequential lapply() was used for iteration."))
   }
   if (.eval == "seq" & .progress == FALSE) {
@@ -36,7 +36,7 @@ seek_seeds_word <- function(.seeds, .word, .eval = "seq", cl = NULL, .progress =
       if (res) stop(paste("Success: Seed:", x), call. = FALSE)
     })
     message(paste0("Sorry, no magic number found for ", .word,
-                  " using seeds from ", min(.seeds), " to ", max(.seeds),
+                  " using seeds from ", min(.seeds), " to ", max(.seeds), " at ", Sys.time(),
                   ".\nSequential lapply() was used for iteration."))
   }
   if (.eval == "par") {
@@ -47,7 +47,7 @@ seek_seeds_word <- function(.seeds, .word, .eval = "seq", cl = NULL, .progress =
       if (res) stop(paste("Success: Seed:", x), call. = FALSE)
     })
     message(paste0("Sorry, no magic number found for ", .word,
-                   " using seeds from ", min(.seeds), " to ", max(.seeds),
+                   " using seeds from ", min(.seeds), " to ", max(.seeds), " at ", Sys.time(),
                    ".\nparallel::clusterApply() was used for iteration."))
   }
   if (.eval == "future" & .progress == TRUE) {
@@ -61,7 +61,7 @@ seek_seeds_word <- function(.seeds, .word, .eval = "seq", cl = NULL, .progress =
     }, future.globals = "check_seed_word", future.seed = NULL
     )
     message(paste0("Sorry, no magic number found for ", .word,
-                   " using seeds from ", min(.seeds), " to ", max(.seeds),
+                   " using seeds from ", min(.seeds), " to ", max(.seeds), " at ", Sys.time(),
                    ".\nfuture.apply::future_lapply() was used for iteration."))
   }
   if (.eval == "future" & .progress == FALSE) {
@@ -71,7 +71,7 @@ seek_seeds_word <- function(.seeds, .word, .eval = "seq", cl = NULL, .progress =
     }, future.globals = "check_seed_word", future.seed = NULL
     )
     message(paste0("Sorry, no magic number found for ", .word,
-                   " using seeds from ", min(.seeds), " to ", max(.seeds),
+                   " using seeds from ", min(.seeds), " to ", max(.seeds), " at ", Sys.time(),
                    ".\nfuture.apply::future_lapply() was used for iteration."))
   }
   invisible(NULL)

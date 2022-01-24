@@ -22,24 +22,13 @@ gc()
 # 11 letters: programming
 # 9 letters: beautiful
 # 8 letters: solution, cruncher
-# 7 letters: weather, teacher
+# 7 letters: weather, teacher, rtistry
 #
 # German
 # figuren
 
 #---------------------------------------------------------#
 # Yet to calculate!
-
-# seek_seeds_word(0:2e8, "rtistry")
-# seek_seeds_word(2e8:4e8, "rtistry")
-# seek_seeds_word(4e8:6e8, "rtistry")
-# seek_seeds_word(6e8:8e8, "rtistry")  # ran for a considerable time
-# seek_seeds_word(65e7:8e8, "rtistry")
-# seek_seeds_word(8e8:10e8, "rtistry")
-# seek_seeds_word(10e8:12e8, "rtistry")
-# seek_seeds_word(12e8:14e8, "rtistry")
-# seek_seeds_word(14e8:16e8, "rtistry")
-# seek_seeds_word(16e8:18e8, "rtistry")
 
 # seek_seeds_word(0:2e8, "favorite")
 # seek_seeds_word(2e8:4e8, "favorite")
@@ -49,17 +38,23 @@ gc()
 # seek_seeds_word(8e8:10e8, "favorite")
 # seek_seeds_word(10e8:12e8, "favorite")
 # seek_seeds_word(12e8:14e8, "favorite")
+# seek_seeds_word(14e8:16e8, "favorite")
+# seek_seeds_word(16e8:18e8, "favorite")
+seek_seeds_word(18e8:20e8, "favorite")
 
 # seek_seeds_word(0:2e8, "language")
 # seek_seeds_word(2e8:4e8, "language")
 # seek_seeds_word(4e8:6e8, "language")
 # seek_seeds_word(6e8:8e8, "language")
 # seek_seeds_word(8e8:10e8, "language")
-seek_seeds_word(10e8:12e8, "language")
+# seek_seeds_word(10e8:12e8, "language")
+# seek_seeds_word(12e8:14e8, "language")
+seek_seeds_word(14e8:16e8, "language")
 
 # seek_seeds_word(0:2e8, "tidyverse")
 # seek_seeds_word(2e8:4e8, "tidyverse")
 # seek_seeds_word(22e7:4e8, "tidyverse")
 # seek_seeds_word(4e8:6e8, "tidyverse")
 # seek_seeds_word(6e8:8e8, "tidyverse")
-seek_seeds_word(8e8:10e8, "tidyverse")
+# seek_seeds_word(8e8:10e8, "tidyverse")
+seek_seeds_word(10e8:12e8, "tidyverse")
