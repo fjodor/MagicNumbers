@@ -16,5 +16,6 @@ MagicNumbers
 }
 \description{
 Dataset containing magic numbers that can be used in set.seed() to generate text accordingly in sample(...).
+NA in seed means: no seed found in valid range of seeds from 0 to 2147483647.
 }
 \keyword{datasets}

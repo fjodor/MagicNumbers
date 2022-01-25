@@ -1,6 +1,7 @@
 #' Magic Numbers = seeds that generate specific texts in sample(...)
 #'
 #' Dataset containing magic numbers that can be used in set.seed() to generate text accordingly in sample(...).
+#' NA in seed means: no seed found in valid range of seeds from 0 to 2147483647.
 #'
 #' @format A data frame with 2 variables and, hopefully, a steadily growing number of rows:
 #' \describe{
