@@ -21,7 +21,7 @@ gc()
 # No seed found for some longer words:
 # 11 letters: programming
 # 9 letters: beautiful
-# 8 letters: solution, cruncher, favorite
+# 8 letters: solution, cruncher, favorite, language
 # 7 letters: weather, teacher, rtistry
 #
 # German
@@ -30,9 +30,7 @@ gc()
 #---------------------------------------------------------#
 # Yet to calculate!
 
-seek_seeds_word(20e8:2147483647, "language")
-seek_seeds_word(16e8:18e8, "tidyverse")
-
-# seek_seeds_word(14e8:16e8, "tidyverse")
-# seek_seeds_word(18e8:20e8, "language")
-
+# seek_seeds_word(16e8:18e8, "tidyverse")
+# seek_seeds_word(18e8:20e8, "tidyverse")
+# seek_seeds_word(20e8:2147483647, "tidyverse")
+seek_seeds_word(203e7:2147483647, "tidyverse")
