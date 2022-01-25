@@ -11,7 +11,7 @@
 #' @examples MagicNumbers <- add_magic_number(.text = "love", .seed = 249725)
 
 add_magic_number <- function(.seed, .text, .data = MagicNumbers) {
-  if (.seed %in% .data[["seed"]]) {
+  if (.seed %in% .data[["seed"]] & !is.na(.seed)) {
     stop(paste("Seed", .seed, "already present in data!"))
   }
   if (.text %in% .data[["text"]]) {
