@@ -109,3 +109,43 @@ seek_seeds_phrase <- function(.seeds, .phrase, .eval = "seq", cl = NULL, .progre
   }
   invisible(NULL)
 }
+
+
+#' Iterate over a vector of seeds to find a magic number for your number of choice.
+#'
+#' @param .seeds vector of seeds to iterate over, e. g. 0:1e5
+#' @param .number number of choice that you want to find a magic number for
+#' @param .progress Show progress bar (TRUE) or not (FALSE)
+#'
+#' @return Currently no useful return value. In case of success, calculation stops, the magic number (seed) is displayed in the console.
+#' @export
+#'
+#' @examples seek_seeds_number(0:1e3, "2023")
+
+seek_seeds_number <- function(.seeds, .number, .progress = FALSE) {
+  .size <- nchar(.number)
+  stopifnot(.size > 0)
+  if (.progress == TRUE) {
+    progressr::handlers(global = TRUE)
+    progressr::handlers("progress")
+    p <- progressr::progressor(along = .seeds)
+    lapply(.seeds, function(x) {
+      p()
+      res <- check_seed_number(x, size = .size, number = .number)
+      if (res) stop(paste("Success: Seed:", x), call. = FALSE)
+    })
+    message(paste0("Sorry, no magic number found for ", .number,
+                   " using seeds from ", min(.seeds), " to ", max(.seeds), " at ", Sys.time(),
+                   ".\nSequential lapply() was used for iteration."))
+  }
+  if (.progress == FALSE) {
+    lapply(.seeds, function(x) {
+      res <- check_seed_number(x, size = .size, number = .number)
+      if (res) stop(paste("Success: Seed:", x), call. = FALSE)
+    })
+    message(paste0("Sorry, no magic number found for ", .number,
+                   " using seeds from ", min(.seeds), " to ", max(.seeds), " at ", Sys.time(),
+                   ".\nSequential lapply() was used for iteration."))
+  }
+  invisible(NULL)
+}

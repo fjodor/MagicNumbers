@@ -2,5 +2,6 @@
 
 export(add_magic_number)
 export(iterate_seedwords_par)
+export(seek_seeds_number)
 export(seek_seeds_word)
 export(test_seed)

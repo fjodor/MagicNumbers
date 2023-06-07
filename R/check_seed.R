@@ -30,3 +30,20 @@ check_seed_phrase <- function(seed, size, phrase) {
   text <- sample(c(letters, " "), size = size, replace = TRUE) |> paste(collapse = "")
   text == phrase
 }
+
+
+#' Check if a random seed generates a specific number (one or more digits)
+#'
+#' @param seed random seed, used in set.seed(seed)
+#' @param size number of digits, used in sample(..., size = size)
+#' @param number number to check
+#'
+#' @return TRUE if seed generates the number, FALSE otherwise
+#'
+#' @examples check_seed_number(1, 4, "1000")  # FALSE
+
+check_seed_number <- function(seed, size, number) {
+  set.seed(seed)
+  result <- sample(0:9, size = size, replace = TRUE) |> paste(collapse = "")
+  result == number
+}
