@@ -1,6 +1,6 @@
 Package: MagicNumbers
 Title: Explore set.seed() to Create Random Texts
-Version: 0.0.0.9000
+Version: 0.1.0
 Authors@R: 
     person("Wolf", "Riepl", , "wolf.riepl@statistik-dresden.de", role = c("aut", "cre"))
 Description: Mines for magic numbers that generate meaningful messages from random letters using set.seed(magicnumber).
